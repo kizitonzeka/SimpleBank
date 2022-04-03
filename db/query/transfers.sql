@@ -14,7 +14,7 @@ WHERE id = $1
 LIMIT 1;
 
 -- name: ListTransfers :many
-SELECT * FROM entries
+SELECT * FROM transfers
 ORDER BY from_account_id
 LIMIT $1
 OFFSET $2;
