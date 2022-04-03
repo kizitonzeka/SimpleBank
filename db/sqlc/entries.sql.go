@@ -105,6 +105,7 @@ const updateEntry = `-- name: UpdateEntry :exec
 UPDATE entries 
 SET amount = $2
 WHERE id = $1
+RETURNING id, account_id, amount, created_at
 `
 
 type UpdateEntryParams struct {
